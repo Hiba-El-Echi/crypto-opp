@@ -5,9 +5,9 @@ const {Text, Title} = Typography
 const {Option} = Select
 const News = ({simplified}) => {
 
-  const {  cryptoNews } = useGetCryptoNewsQuery({ newsCategory: 'Cryptocurrency', count: simplified ? 6 : 12 });
+  const {  data :cryptoNews } = useGetCryptoNewsQuery({ newsCategory: 'Cryptocurrency', count: simplified ? 6 : 12 });
 
-  console.log(data," data news")
+  console.log(cryptoNews," data news")
    return <div>News</div>;
 };
 
