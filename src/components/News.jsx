@@ -8,6 +8,7 @@ import { useGetCryptosQuery } from '../services/cryptoApi';
 const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
 const {Text, Title} = Typography
 const {Option} = Select
+import Loader from './Loader';
 const News = ({simplified}) => {
 
   const [newsCategory, setNewsCategory] = useState('Cryptocurrency');
@@ -16,7 +17,7 @@ const News = ({simplified}) => {
  
 
   console.log(cryptoNews," data news")
-  if(!cryptoNews?.value) return 'Loading ... '
+  if(!cryptoNews?.value) return <Loader />
    return <Row gutter={[24,24]}>
           {!simplified && (
         <Col span={24}>
