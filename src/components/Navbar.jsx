@@ -1,5 +1,7 @@
+import React, { useState, useEffect } from 'react';
 import { Button, Menu, Typography, Avatar } from "antd";
 import { Link } from "react-router-dom";
+
 import {
   HomeOutlined,
   MoneyCollectOutlined,
@@ -10,6 +12,7 @@ import {
 import icon from "../images/cryptocurrency.png";
 
 const Navbar = () => {
+  const [activeMenu, setActiveMenu] = useState(true);
   return (
     <div className="nav-container">
       <div className="logo-container">
@@ -20,6 +23,7 @@ const Navbar = () => {
         {/* <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button> */}
       </div>
 
+      {activeMenu && (
       <Menu theme="dark">
         <Menu.Item icon={<HomeOutlined />}>
           <Link to="/">Home</Link>
@@ -34,6 +38,7 @@ const Navbar = () => {
           <Link to="/news">News</Link>
         </Menu.Item>
       </Menu>
+      )}
     </div>
   );
 };
