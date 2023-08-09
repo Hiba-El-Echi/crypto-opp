@@ -4,6 +4,13 @@
 
 This project is a template for creating web applications using React, Redux, and Vite. It provides a quick setup for getting started with building modern web applications that utilize state management through Redux and a fast development environment with Vite.
 
+## Useful Links
+
+- [Live Demo](https://crypto-world2.netlify.app/)
+
+
+
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
